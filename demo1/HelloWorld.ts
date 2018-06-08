@@ -44,3 +44,24 @@ function createClassDemo(person: Person) {
 let userClass = new Student('Zephyr','JS','Zheng')
 
 createClassDemo(userClass)
+
+enum Color { Red, Green, Blue }
+let color: Color = Color.Red
+
+let testAny: any = 4
+testAny.indexOf() // 编译器不会报错
+let testArr: Array<any> = [1,'2',true]
+
+function testVoid(): void {
+    console.log('no void')
+}
+
+// 测试 null 和 undefined
+let num: number = null
+let num1: number = undefined
+let colorNull: Color = null
+let arrUndefined: Array<number> = undefined
+
+function error(): never {
+    throw new Error()
+}

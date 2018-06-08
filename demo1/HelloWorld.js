@@ -27,3 +27,24 @@ function createClassDemo(person) {
 }
 var userClass = new Student('Zephyr', 'JS', 'Zheng');
 createClassDemo(userClass);
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+var color = Color.Red;
+var testAny = 4;
+testAny.indexOf(); // 编译器不会报错
+var testArr = [1, '2', true];
+function testVoid() {
+    console.log('no void');
+}
+// 测试 null 和 undefined
+var num = null;
+var num1 = undefined;
+var colorNull = null;
+var arrUndefined = undefined;
+function error() {
+    throw new Error();
+}
